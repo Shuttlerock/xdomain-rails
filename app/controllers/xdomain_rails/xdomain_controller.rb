@@ -1,6 +1,6 @@
 module XdomainRails
   class XdomainController < ApplicationController
-    after_filter :allow_iframe
+    after_action :allow_iframe
 
     def proxy
       expires_in cache, public: true if cache

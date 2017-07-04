@@ -12,6 +12,7 @@ module XdomainRails
 
     initializer 'xdomain_rails.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
+        include ActionController::Helpers
         helper XdomainRails::XdomainHelper
       end
     end
